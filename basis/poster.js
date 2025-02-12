@@ -37,10 +37,7 @@ scrollTop.forEach((e) => {
     });
 const branSlider = new Swiper(".branSlider", { loop: !0, slidesPerView: 5, speed: 1e3, spaceBetween: 51, autoplay: { delay: 0 } }),
     commendSlider = new Swiper(".commendSlider", { loop: !0, slidesPerView: 2.8, speed: 1e3, spaceBetween: 20, navigation: { nextEl: ".nextCommen", prevEl: ".prevCommen" } }),
-    imgGallerySlider = new Swiper(".imgGallerySlider", { slidesPerView: 2, speed: 1e3, centeredSlides: !0,
-         spaceBetween: 48, navigation: { nextEl: ".nextconfer", prevEl: ".prevconfer" },
-          grabCursor: !0 ,
-        loop:true}),
+    imgGallerySlider = new Swiper(".imgGallerySlider", { slidesPerView: 2, speed: 1e3, centeredSlides: !0, spaceBetween: 48, navigation: { nextEl: ".nextconfer", prevEl: ".prevconfer" }, grabCursor: !0, loop: !0 }),
     conferSlider = new Swiper(".conferSlider", {
         slidesPerView: 2,
         speed: 1e3,
@@ -130,11 +127,10 @@ const popSlider = new Swiper(".popSlider", {
         },
     },
 });
-for (let e = 0; e < thumbBox.length; e++) {
+for (let e = 0; e < thumbBox.length; e++)
     thumbBox[e].addEventListener("click", function (l) {
         sGalleryFlag && (popSlider.slideTo(e + 1, 0), sGallery.classList.add("popOpen"), (sGalleryFlag = !1), popUpVideoGalleryContainer.scrollTo(0, 0), (popUpVideoGalleryContainer.style.overflow = "hidden"));
     });
-}
 closeSlider.addEventListener("click", function (e) {
     sGallery.classList.remove("popOpen"), (sGalleryFlag = !0), (popUpVideoGalleryContainer.style.overflow = "auto");
 }),
@@ -252,11 +248,10 @@ const popSlider6 = new Swiper(".popSlider6", {
         },
     },
 });
-for (let e = 0; e < thumbBox6.length; e++) {
+for (let e = 0; e < thumbBox6.length; e++)
     thumbBox6[e].addEventListener("click", function (l) {
         console.log(sGalleryFlag), popSlider6.slideTo(e + 1, 0), sGallery6.classList.add("popOpen"), (sGalleryFlag = !sGalleryFlag), popUpVideoGalleryContainer6.scrollTo(0, 0), (popUpVideoGalleryContainer6.style.overflow = "hidden");
     });
-}
 closeSlider6.addEventListener("click", function (e) {
     sGallery6.classList.remove("popOpen"), (sGalleryFlag = !sGalleryFlag), (popUpVideoGalleryContainer6.style.overflow = "auto");
 }),
